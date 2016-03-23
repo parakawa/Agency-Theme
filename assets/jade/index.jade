@@ -1,0 +1,30 @@
+include mixins
+doctype
+html
+	head
+		title Agency Theme
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		link(href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css')
+		link(href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css')
+		link(rel="stylesheet" href="assets/css/bootstrap.min.css")
+		link(rel="stylesheet", href="assets/css/font-awesome.min.css")
+		link(rel="stylesheet", href="assets/css/main.css")
+	body
+		header.header_area
+			nav.navbar.navbar-default.navbar-fixed-top.nav-fut-imperfect
+				.container
+					.navbar-header
+						button(type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar")
+							span.sr-only Toggle Navigation
+							span.icon-bar
+							span.icon-bar
+							span.icon-bar
+						a.navbar-brand(href="#") Start Bootstrap
+					#navbar.navbar-collapse.collapse
+						ul.nav.navbar-nav.navbar-right
+							+liref('#services','SERVICES')
+							+liref('#portfolio','PORTFOLIO')
+							+liref('#about','ABOUT')
+							+liref('#team','TEAM')
+							+liref('#contact','CONTACT')
