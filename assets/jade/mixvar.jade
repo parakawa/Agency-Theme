@@ -1,0 +1,30 @@
+-var paginasweb="Desarrollamos páginas web estáticas y dinámicas para tu empresa o startup hechas a tu gusto y medida"
+-var responsive="El futuro es móvil, y conscientes de estos avances, diseñamos páginas adaptadas a todos los dispositivos móviles, sea celulares o tablets"
+-var moviles="Hey, también elaboramos apps móviles! Checa nuestro portafolio y entérate de las últimas aplicaciones que hemos desarrollado"
+
+
+//- SECTION PORTFOLIO
+mixin urlpng(urlpng)
+  img(src="img/portfolio/" + urlpng + ".png")
+
+mixin portfoliobg(portfoliobg)
+  case portfoliobg
+    when 'bg1'
+      +urlpng ("roundicons")
+    when 'bg2'
+      +urlpng ("startup-framework")
+    when 'bg3'
+      +urlpng ("treehouse-preview")
+    when 'bg4'
+      +urlpng ("golden-preview")      
+    when 'bg5'
+      +urlpng ("escape-preview")
+    when 'bg6'
+      +urlpng ("dreams-preview")
+
+mixin portfoliolist(portfoliobg, portfoliotittle, portfoliosubtit)
+  .col-md-4
+    +portfoliobg(portfoliobg)
+    .bgwhite
+      h3= portfoliotittle
+      span.subtit= portfoliosubtit

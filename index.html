@@ -1,33 +1,109 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Agency Theme</title>
+    <title>Altescii</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="http://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
   </head>
   <body>
-    <header class="header_area">
-      <nav class="navbar navbar-default navbar-fixed-top nav-fut-imperfect">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" class="navbar-toggle collapsed"><span class="sr-only">Toggle Navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="navbar-brand">Start Bootstrap</a>
-          </div>
-          <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="#services">SERVICES</a></li>
-              <li><a href="#portfolio">PORTFOLIO</a></li>
-              <li><a href="#about">ABOUT</a></li>
-              <li><a href="#team">TEAM</a></li>
-              <li><a href="#contact">CONTACT</a></li>
-            </ul>
-          </div>
+    <header>
+      <nav id="menu" class="navbar navbar-default navbar-fixed-top">
+        <div class="navbar-header">
+          <button type="button" data-toggle="collapse" data-target="#navbarCollapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="navbar-brand">Altescii</a>
+        </div>
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li> <a href="#services">SERVICIOS</a></li>
+            <li> <a href="#portfolio">PORTAFOLIO</a></li>
+            <li> <a href="#about">HISTORIA</a></li>
+            <li> <a href="#team">NOSOTROS</a></li>
+            <li> <a href="#contact">CONTACTO</a></li>
+          </ul>
         </div>
       </nav>
     </header>
+    <section class="header-bg">
+      <div class="container text-center">
+        <h2>Hacemos más que páginas web</h2>
+        <h1>Creamos nuevas historias</h1>
+        <button type="submit" class="btn btn-default btn-yellow">CUÉNTANOS DE TI!</button>
+      </div>
+    </section>
+    <section id="services" class="services">
+      <div class="container text-center">
+        <h3>SERVICIOS</h3>
+        <p class="concepto"></p>
+        <div class="row">
+          <div class="col-md-4 box-service"><i class="fa fa-desktop"></i>
+            <h4>Páginas Web</h4>
+            <p>Desarrollamos páginas web estáticas y dinámicas para tu empresa o startup hechas a tu gusto y medida</p>
+          </div>
+          <div class="col-md-4 box-service"><i class="fa fa-mobile"></i>
+            <h4>Responsive Design</h4>
+            <p>El futuro es móvil, y conscientes de estos avances, diseñamos páginas adaptadas a todos los dispositivos móviles, sea celulares o tablets</p>
+          </div>
+          <div class="col-md-4 box-service"><i class="fa fa-rocket"></i>
+            <h4>Aplicaciones Móviles</h4>
+            <p>Hey, también elaboramos apps móviles! Checa nuestro portafolio y entérate de las últimas aplicaciones que hemos desarrollado</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="portfolio" class="portfolio">
+      <div class="container text-center">
+        <h3>PORTFOLIO</h3>
+        <p class="concepto"></p>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="portfolio-item"><img src="img/portfolio/roundicons.png" alt="">
+              <h4>Round Icons</h4>
+              <p>Graphic Design</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="portfolio-item"><img src="img/portfolio/startup-framework.png" alt="">
+              <h4>Startup Framework</h4>
+              <p>Web Design</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="portfolio-item"><img src="img/portfolio/treehouse.png" alt="">
+              <h4>Treehouse</h4>
+              <p>Web Design</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="portfolio-item"><img src="img/portfolio/golden.png" alt="">
+              <h4>Golden</h4>
+              <p>Graphic Design</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="portfolio-item"><img src="img/portfolio/escape.png" alt="">
+              <h4>Escape</h4>
+              <p>Web Design</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="portfolio-item"><img src="img/portfolio/dreams.png" alt="">
+              <h4>Dreams</h4>
+              <p>Web Design</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script type="text/javascript" src="assets/js/jquery.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
   </body>
 </html>

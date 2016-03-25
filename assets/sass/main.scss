@@ -1,19 +1,90 @@
-$theme:#fed136;
+@import "_mixvar";
 
-header {
-    text-align: center;
+img{
+  width: 100%;
+}
+
+#menu.active {
+  background-color: #222222; }
+
+header .navbar-default {
+  border: none;
+  background-color: transparent;
+  padding: 2% 4%; }
+  header .navbar-default .navbar-brand {
+    font-family: 'Kaushan Script', cursive;
+    color: #FED136;
+    font-size: 1.8em; }
+  header .navbar-default .navbar-nav > li > a {
+    font-family: "Montserrat", sans-serif;
+    color: white; }
+    header .navbar-default .navbar-nav > li > a:hover {
+      color: #fec503; }
+    @media (max-width: 768px) {
+      header .navbar-default .navbar-nav > li > a {
+        background-color: #222222; }
+        header .navbar-default .navbar-nav > li > a:hover {
+          background-color: black; } }
+
+.header-bg {
+  background-image: url("../../img/header-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 114vh;
+  display: flex;
+  align-items: center;
+  color: white; }
+  .header-bg h2 {
+    font-family: "Droid Serif", serif;
+    font-style: italic;
+    font-size: 3em; }
+  .header-bg h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 5.5em;
+    font-weight: bold;
+    margin-bottom: 5%; }
+  .header-bg .btn-yellow {
     color: white;
-    background-attachment: scroll;
-    background-image: url(../img/header-bg.jpg);
-    background-position: center center;
-    background-repeat: none;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
+    font-family: "Montserrat", sans-serif;
+    background-color: #FED136;
+    padding: 1.8% 3%;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: none; }
+    .header-bg .btn-yellow:hover {
+      background-color: #fec503; }
 
-.navbar-default .navbar-brand {
-    font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
-    color:$theme;
-}
+h3 {
+  font-size: 2.8em;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif; }
+
+.concepto {
+  color: #777777;
+  font-style: italic;
+  font-family: "Droid Serif", serif;
+  margin-top: 2%; }
+
+.services, .about {
+  padding: 7% 0%; }
+  .services .concepto, .about .concepto {
+    margin-bottom: 5%; }
+  .services .box-service i, .about .box-service i {
+    background-color: #FED136;
+    border-radius: 50%;
+    font-size: 4.5em;
+    width: 100px;
+    height: 100px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto; }
+  .services .box-service h4, .about .box-service h4 {
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+    margin: 5% 0%; }
+  .services .box-service p, .about .box-service p {
+    color: #777777;
+    font-family: "Roboto Slab", serif;
+    line-height: 24px; }

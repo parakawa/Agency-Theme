@@ -1,30 +1,103 @@
-include mixins
+include mixvar
 doctype
 html
 	head
-		title Agency Theme
+		title Altescii
 		meta(charset="utf-8")
 		meta(name="viewport" content="width=device-width, initial-scale=1")
 		link(href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css')
-		link(href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css')
+		link(href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css')
+		link(href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css')
+		link(href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css')
 		link(rel="stylesheet" href="assets/css/bootstrap.min.css")
 		link(rel="stylesheet", href="assets/css/font-awesome.min.css")
 		link(rel="stylesheet", href="assets/css/main.css")
 	body
-		header.header_area
-			nav.navbar.navbar-default.navbar-fixed-top.nav-fut-imperfect
-				.container
-					.navbar-header
-						button(type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar")
-							span.sr-only Toggle Navigation
-							span.icon-bar
-							span.icon-bar
-							span.icon-bar
-						a.navbar-brand(href="#") Start Bootstrap
-					#navbar.navbar-collapse.collapse
-						ul.nav.navbar-nav.navbar-right
-							+liref('#services','SERVICES')
-							+liref('#portfolio','PORTFOLIO')
-							+liref('#about','ABOUT')
-							+liref('#team','TEAM')
-							+liref('#contact','CONTACT')
+		header
+			nav#menu.navbar.navbar-default.navbar-fixed-top
+				div.navbar-header
+					button.navbar-toggle(type="button" data-toggle="collapse" data-target="#navbarCollapse")
+						span.sr-only Toggle navigation
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					
+					a.navbar-brand(href="#") Altescii
+
+				div#navbarCollapse.collapse.navbar-collapse
+					ul.nav.navbar-nav.navbar-right
+						li 
+							a(href="#services") SERVICIOS
+						li 
+							a(href="#portfolio") PORTAFOLIO
+						li 
+							a(href="#about") HISTORIA
+						li 
+							a(href="#team") NOSOTROS
+						li 
+							a(href="#contact") CONTACTO
+
+		section.header-bg
+			div.container.text-center
+				h2 Hacemos más que páginas web
+				h1 Creamos nuevas historias
+				button.btn.btn-default.btn-yellow(type="submit") CUÉNTANOS DE TI!
+
+		section#services.services
+			div.container.text-center
+				h3 SERVICIOS
+				p.concepto=concepto
+				div.row
+					div.col-md-4.box-service
+						i.fa.fa-desktop
+						h4 Páginas Web
+						p=paginasweb
+					div.col-md-4.box-service
+						i.fa.fa-mobile
+						h4 Responsive Design
+						p=responsive
+					div.col-md-4.box-service
+						i.fa.fa-rocket
+						h4 Aplicaciones Móviles
+						p=moviles
+						
+		section#portfolio.portfolio
+			div.container.text-center
+				h3 PORTFOLIO
+				p.concepto=concepto
+				div.row
+					div.col-md-4
+						div.portfolio-item
+							img(src="img/portfolio/roundicons.png", alt="")
+							h4 Round Icons
+							p Graphic Design
+					div.col-md-4
+						div.portfolio-item
+							img(src="img/portfolio/startup-framework.png", alt="")
+							h4 Startup Framework
+							p Web Design
+					div.col-md-4
+						div.portfolio-item
+							img(src="img/portfolio/treehouse.png", alt="")
+							h4 Treehouse
+							p Web Design
+
+				div.row
+					div.col-md-4
+						div.portfolio-item
+							img(src="img/portfolio/golden.png", alt="")
+							h4 Golden
+							p Graphic Design
+					div.col-md-4
+						div.portfolio-item
+							img(src="img/portfolio/escape.png", alt="")
+							h4 Escape
+							p Web Design
+					div.col-md-4
+						div.portfolio-item
+							img(src="img/portfolio/dreams.png", alt="")
+							h4 Dreams
+							p Web Design
+		script(type='text/javascript', src='assets/js/jquery.js')
+		script(type='text/javascript', src='assets/js/bootstrap.min.js')
+		script(type='text/javascript', src='assets/js/main.js')
