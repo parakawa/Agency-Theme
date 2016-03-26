@@ -1,9 +1,15 @@
 $theme: #FED136;
 $oscuro: black;
+$bg-dark-light:#F7F7F7;
 $altescii: 'Kaushan Script', sans-serif;
 $titles: 'Montserrat', sans-serif;
 $italica:'Droid Serif', sans-serif;
 
+@mixin radius($radius) {
+-webkit-border-radius: $radius;
+-moz-border-radius: $radius;
+border-radius: $radius;
+}
 
 @mixin btn-yellow{
   color: white;
@@ -33,4 +39,9 @@ $italica:'Droid Serif', sans-serif;
   i{
     margin-top: 28%;
   }
+}
+
+@mixin imgcircle($imgborder) {
+  @include radius(100%);
+  border: 6px solid $imgborder;
 }

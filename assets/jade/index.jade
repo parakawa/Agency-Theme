@@ -68,36 +68,83 @@ html
 				div.row
 					div.col-md-4
 						div.portfolio-item
-							img(src="img/portfolio/roundicons.png", alt="")
-							h4 Round Icons
-							p Graphic Design
+							a(href="http://parakawa.github.io/Flat-Theme/", target="_blank")
+								img(src="img/portfolio/flat-theme.png", alt="")
+							h4 Flat-Theme
+							p Bootstrap
 					div.col-md-4
 						div.portfolio-item
-							img(src="img/portfolio/startup-framework.png", alt="")
-							h4 Startup Framework
-							p Web Design
+							a(href="http://parakawa.github.io/LoveBlog-Theme/", target="_blank")
+								img(src="img/portfolio/love-blog.png", alt="")
+							h4 Love Blog
+							p Bootstrap
 					div.col-md-4
 						div.portfolio-item
-							img(src="img/portfolio/treehouse.png", alt="")
-							h4 Treehouse
+							a(href="http://parakawa.github.io/TrabajoGrupal/", target="_blank")
+								img(src="img/portfolio/portfolio.png", alt="")
+							h4 Portfolio
 							p Web Design
 
 				div.row
 					div.col-md-4
 						div.portfolio-item
-							img(src="img/portfolio/golden.png", alt="")
-							h4 Golden
-							p Graphic Design
-					div.col-md-4
-						div.portfolio-item
-							img(src="img/portfolio/escape.png", alt="")
-							h4 Escape
+							a(href="http://parakawa.github.io/Flatness/", target="_blank")
+								img(src="img/portfolio/flatness400.png", alt="")
+							h4 Flatness
 							p Web Design
 					div.col-md-4
 						div.portfolio-item
-							img(src="img/portfolio/dreams.png", alt="")
-							h4 Dreams
+							a(href="http://michu6.github.io/Proyecto-primes/", target="_blank")
+								img(src="img/portfolio/primes.png", alt="")
+							h4 Primes
 							p Web Design
-		script(type='text/javascript', src='assets/js/jquery.js')
-		script(type='text/javascript', src='assets/js/bootstrap.min.js')
-		script(type='text/javascript', src='assets/js/main.js')
+					div.col-md-4
+						div.portfolio-item
+							a(href="http://sazabache.github.io/Sentient/", target="_blank")
+								img(src="img/portfolio/sentient.png", alt="")
+							h4 Sentient
+							p Web Responsive
+	section#team.text-center
+		h2 CONOCE A NUESTRO EQUIPO!
+		span.subtit Coders de Laboratoria
+		.container 
+			.row.mt-5
+			+team('img/team/karen.png', 'Karen Valdivia', 'Web Designer','https://twitter.com/altescii','https://www.facebook.com/karenmarilu.valdiviasimiche?fref=ts','https://github.com/Michu6')
+			+team('img/team/sandra.jpg', 'Sandra Azabache', 'Web Designer','https://twitter.com/altescii','https://www.facebook.com/sandramar02?fref=ts','https://github.com/sazabache')
+			+team('img/team/paty.jpg', 'Paty Arakawa', 'Web Designer','https://twitter.com/patydromeda','https://www.facebook.com/paty.arakawa?fref=ts','https://github.com/parakawa')
+
+	section#logos.text-center
+	.container
+			+logos('laboratoria.png')
+
+	section#contact.contact
+			div.container.text-center
+				h3 CONTÁCTANOS
+				div.row.formulario
+					div.col-md-6
+						form
+							div.form-group
+								input.form-control(type="text", placeholder="NOMBRE *")
+							div.form-group
+								input.form-control(type="email", placeholder="EMAIL *")
+							div.form-group
+								input.form-control(type="tel", placeholder="CELULAR *")
+
+					div.col-md-6
+						div.form-group
+							textarea.form-control(name="", cols="30", rows="8", placeholder="ESCRIBE TU MENSAJE AQUÍ *")
+				button.btn.btn-default.btn-yellow(type="submit") ENVIAR
+	footer
+			div.container.text-center
+				div.row
+					div.col-md-4
+						p Altescii 2016
+					div.col-md-4
+						+social('https://twitter.com/altescii','https://www.facebook.com/altescii','altescii.com')
+					div.col-md-4.line
+						a(href="#") By HTML5 Up
+						a(href="#") Términos de Uso
+
+	script(type='text/javascript', src='assets/js/jquery.js')
+	script(type='text/javascript', src='assets/js/bootstrap.min.js')
+	script(type='text/javascript', src='assets/js/main.js')

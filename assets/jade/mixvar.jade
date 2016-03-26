@@ -1,30 +1,21 @@
--var paginasweb="Desarrollamos páginas web estáticas y dinámicas para tu empresa o startup hechas a tu gusto y medida"
--var responsive="El futuro es móvil, y conscientes de estos avances, diseñamos páginas adaptadas a todos los dispositivos móviles, sea celulares o tablets"
--var moviles="Hey, también elaboramos apps móviles! Checa nuestro portafolio y entérate de las últimas aplicaciones que hemos desarrollado"
+-var paginasweb="Desarrollamos páginas web estáticas y dinámicas para tu empresa o startup hechas a tu gusto y medida."
+-var responsive="El futuro es móvil, y conscientes de estos avances, diseñamos páginas adaptadas a todos los dispositivos móviles, sea celulares o tablets."
+-var moviles="Hey, también elaboramos apps móviles! Checa nuestro portafolio y entérate de las últimas aplicaciones que hemos desarrollado."
 
 
-//- SECTION PORTFOLIO
-mixin urlpng(urlpng)
-  img(src="img/portfolio/" + urlpng + ".png")
-
-mixin portfoliobg(portfoliobg)
-  case portfoliobg
-    when 'bg1'
-      +urlpng ("roundicons")
-    when 'bg2'
-      +urlpng ("startup-framework")
-    when 'bg3'
-      +urlpng ("treehouse-preview")
-    when 'bg4'
-      +urlpng ("golden-preview")      
-    when 'bg5'
-      +urlpng ("escape-preview")
-    when 'bg6'
-      +urlpng ("dreams-preview")
-
-mixin portfoliolist(portfoliobg, portfoliotittle, portfoliosubtit)
+mixin teamimg(x)
+      img.circle(src=""+x)
+mixin social(x,y,z)
+  .social-media
+    a(href=""+x).social-circle.fa.fa-twitter
+    a(href=""+y).social-circle.fa.fa-facebook
+    a(href=""+z).social-circle.fa.fa-github
+mixin team(teamimg, teamtittle, teamsubtit,x,y,z)
   .col-md-4
-    +portfoliobg(portfoliobg)
-    .bgwhite
-      h3= portfoliotittle
-      span.subtit= portfoliosubtit
+    +teamimg(teamimg)
+    h3= teamtittle
+    span.teamsubtit= " " + teamsubtit
+    +social(x,y,z)
+
+mixin logos(logoname)
+    img(src="img/logos/" + logoname)

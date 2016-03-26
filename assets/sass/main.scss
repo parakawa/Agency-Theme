@@ -1,7 +1,7 @@
 @import "_mixvar";
 
-img{
-  width: 100%;
+body{
+  font-family: $titles;
 }
 
 #menu.active {
@@ -16,7 +16,7 @@ header .navbar-default {
     color: #FED136;
     font-size: 1.8em; }
   header .navbar-default .navbar-nav > li > a {
-    font-family: "Montserrat", sans-serif;
+    font-family: $titles, sans-serif;
     color: white; }
     header .navbar-default .navbar-nav > li > a:hover {
       color: #fec503; }
@@ -35,17 +35,17 @@ header .navbar-default {
   align-items: center;
   color: white; }
   .header-bg h2 {
-    font-family: "Droid Serif", serif;
+    font-family: $italica, serif;
     font-style: italic;
     font-size: 3em; }
   .header-bg h1 {
-    font-family: "Montserrat", sans-serif;
+    font-family: $titles, sans-serif;
     font-size: 5.5em;
     font-weight: bold;
     margin-bottom: 5%; }
   .header-bg .btn-yellow {
     color: white;
-    font-family: "Montserrat", sans-serif;
+    font-family: $titles, sans-serif;
     background-color: #FED136;
     padding: 1.8% 3%;
     font-size: 1.2em;
@@ -57,12 +57,12 @@ header .navbar-default {
 h3 {
   font-size: 2.8em;
   font-weight: bold;
-  font-family: "Montserrat", sans-serif; }
+  font-family: $titles, sans-serif; }
 
 .concepto {
   color: #777777;
   font-style: italic;
-  font-family: "Droid Serif", serif;
+  font-family: $italica, serif;
   margin-top: 2%; }
 
 .services, .about {
@@ -82,9 +82,108 @@ h3 {
     margin: auto; }
   .services .box-service h4, .about .box-service h4 {
     font-weight: 600;
-    font-family: "Montserrat", sans-serif;
+    font-family: $titles, sans-serif;
     margin: 5% 0%; }
   .services .box-service p, .about .box-service p {
     color: #777777;
     font-family: "Roboto Slab", serif;
     line-height: 24px; }
+
+.portfolio{
+  padding: 7% 0%;
+  .concepto{
+    margin-bottom: 5%;
+  }
+  .portfolio-item{
+    background-color: white;
+    margin: 4% 0%;
+    h4{
+      font-family: $titles;
+      margin: 6px 0 5px 0;
+      font-weight: bold;
+    }
+    img{
+      width: 100%;
+    }
+    p{
+      font-family: $italica;
+      font-style: italic;
+      font-size: 1.2em;
+      padding-bottom: 5%;
+    }
+  }
+}
+
+#team {
+    background-color: $bg-dark-light;
+    .circle {
+      @include imgcircle(white);
+    }
+  p {
+    margin: 0 auto;
+    width: 40%;
+  }
+}
+
+.contact {
+  padding: 7% 0%;
+  background-color: #222222;
+  background-image: url("../../img/map-image.png");
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .contact h3 {
+    color: white; }
+  .contact .formulario {
+    margin: 4% 0%; }
+    .contact .formulario form input {
+      padding: 5.2% 4%;
+      font-weight: bold;
+      font-family: "Montserrat", sans-serif; }
+    .contact .formulario textarea {
+      padding: 4%;
+      font-weight: bold;
+      font-family: "Montserrat", sans-serif; }
+  .contact .btn-yellow {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    background-color: #FED136;
+    padding: 1.8% 3%;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: none; }
+    .contact .btn-yellow:hover {
+      background-color: #fec503; }
+
+footer{
+  font-size: 0.9em;
+  padding: 2% 0%;
+  .line{
+    margin-top: 1%;
+    a{
+      color: $theme;
+      margin-right: 5%;
+      &:hover{
+        color: white;
+        text-decoration: none;
+      }
+      @media (max-width: 760px){
+        margin: 1%;
+      }
+    }
+  }
+  p{
+    margin-top: 3.5%;
+  }
+}
+
+.social-media a.social-circle {
+  border-radius: 100%;
+  background-color: #303333;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  display: inline-block;
+  width: 1.7em;
+  height: 1.7em;
+  line-height: 1.7em;
+  margin: 0 2%; }
