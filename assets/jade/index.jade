@@ -40,10 +40,10 @@ html
 		section.header-bg
 			div.container.text-center
 				h2 Hacemos más que páginas web
-				h1 Creamos nuevas historias
+				h3 Creamos nuevas historias
 				button.btn.btn-default.btn-yellow(type="submit") CUÉNTANOS DE TI!
 
-		section#services.services
+		section#services
 			div.container.text-center
 				h3 SERVICIOS
 				p.concepto=concepto
@@ -61,9 +61,9 @@ html
 						h4 Aplicaciones Móviles
 						p=moviles
 						
-		section#portfolio.portfolio
+		section#portfolio
 			div.container.text-center
-				h3 PORTFOLIO
+				h3 PORTAFOLIO
 				p.concepto=concepto
 				div.row
 					div.col-md-4
@@ -104,20 +104,69 @@ html
 								img(src="img/portfolio/sentient.png", alt="")
 							h4 Sentient
 							p Web Responsive
+
+	section#about.text-center
+		h3 NUESTRA HISTORIA
+		.container
+			.row
+				.col-md-5
+					.timeline-text.text-right
+						h4 AÑOS 2014-2015
+						p=history1
+				.col-md-2
+					.timeline-img
+						img.text-center(src="img/about/1.jpg")
+
+			.row
+				.col-md-offset-5.col-md-2
+					.timeline-img
+						img.text-center(src="img/about/2.jpg")
+				.col-md-5
+					.timeline-text.text-left
+						h4 PRINCIPIOS 2015
+						p=history2
+
+			.row
+				.col-md-5
+					.timeline-text.text-right
+						h4 ENERO 2016
+						p=history3
+				.col-md-2
+					.timeline-img
+						img.text-center(src="img/about/3.jpg")
+							
+			.row
+				.col-md-offset-5.col-md-2
+					.timeline-img
+						img.text-center(src="img/about/4.jpg")
+				.col-md-5
+					.timeline-text.text-left
+						h4 MARZO 2016
+						p=history4
+		
+		.history 
+			h5 SÉ PARTE 
+				br
+				| DE NUESTRA
+				br 
+				| HISTORIA!
+							
+
 	section#team.text-center
-		h2 CONOCE A NUESTRO EQUIPO!
-		span.subtit Coders de Laboratoria
+		h3 EL EQUIPO!
+		h4 Coders de 
+			span Laboratoria
 		.container 
-			.row.mt-5
+			.row
 			+team('img/team/karen.png', 'Karen Valdivia', 'Web Designer','https://twitter.com/altescii','https://www.facebook.com/karenmarilu.valdiviasimiche?fref=ts','https://github.com/Michu6')
 			+team('img/team/sandra.jpg', 'Sandra Azabache', 'Web Designer','https://twitter.com/altescii','https://www.facebook.com/sandramar02?fref=ts','https://github.com/sazabache')
 			+team('img/team/paty.jpg', 'Paty Arakawa', 'Web Designer','https://twitter.com/patydromeda','https://www.facebook.com/paty.arakawa?fref=ts','https://github.com/parakawa')
 
 	section#logos.text-center
-	.container
+		.container
 			+logos('laboratoria.png')
 
-	section#contact.contact
+	section#contact
 			div.container.text-center
 				h3 CONTÁCTANOS
 				div.row.formulario
@@ -147,4 +196,7 @@ html
 
 	script(type='text/javascript', src='assets/js/jquery.js')
 	script(type='text/javascript', src='assets/js/bootstrap.min.js')
-	script(type='text/javascript', src='assets/js/main.js')
+	script(type='text/javascript', src='assets/js/classie.js')
+	script(type='text/javascript', src='assets/js/cbpAnimatedHeader.js')
+	script(type='text/javascript', src='assets/js/agency.js')
+		

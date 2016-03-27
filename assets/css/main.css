@@ -1,32 +1,42 @@
+@charset "UTF-8";
 body {
   font-family: "Montserrat", sans-serif; }
 
-#menu.active {
-  background-color: #222222; }
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+  color: #555;
+  background-color: #FED136; }
 
+/*©Milu Robles*/
 header .navbar-default {
   border: none;
   background-color: transparent;
   padding: 2% 4%; }
-
-header .navbar-default .navbar-brand {
-  font-family: 'Kaushan Script', cursive;
-  color: #FED136;
-  font-size: 1.8em; }
-
-header .navbar-default .navbar-nav > li > a {
-  font-family: "Montserrat", sans-serif, sans-serif;
-  color: white; }
-
-header .navbar-default .navbar-nav > li > a:hover {
-  color: #fec503; }
-
-@media (max-width: 768px) {
   header .navbar-default .navbar-nav > li > a {
-    background-color: #222222; }
+    font-family: "Montserrat", sans-serif, sans-serif;
+    color: white; }
+    @media (max-width: 768px) {
+      header .navbar-default .navbar-nav > li > a {
+        background-color: black; }
+        header .navbar-default .navbar-nav > li > a:hover {
+          background-color: black; } }
+  header .navbar-default .navbar-brand {
+    font-family: 'Kaushan Script', cursive;
+    color: #FED136;
+    font-size: 1.8em; }
 
-  header .navbar-default .navbar-nav > li > a:hover {
-    background-color: black; } }
+/*Cambio de bg-menu*/
+.nav-black {
+  background-color: black; }
+
+h3 {
+  font-size: 2.8em;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif, sans-serif; }
+  @media (max-width: 400px) {
+    h3 {
+      font-size: 2em; } }
+
+/*©Milu Robles*/
 .header-bg {
   background-image: url("../../img/header-bg.jpg");
   background-repeat: no-repeat;
@@ -35,133 +45,120 @@ header .navbar-default .navbar-nav > li > a:hover {
   display: flex;
   align-items: center;
   color: white; }
-
-.header-bg h2 {
-  font-family: "Droid Serif", sans-serif, serif;
-  font-style: italic;
-  font-size: 3em; }
-
-.header-bg h1 {
-  font-family: "Montserrat", sans-serif, sans-serif;
-  font-size: 5.5em;
-  font-weight: bold;
-  margin-bottom: 5%; }
-
-.header-bg .btn-yellow {
-  color: white;
-  font-family: "Montserrat", sans-serif, sans-serif;
-  background-color: #FED136;
-  padding: 1.8% 3%;
-  font-size: 1.2em;
-  font-weight: bold;
-  border: none; }
-
-.header-bg .btn-yellow:hover {
-  background-color: #fec503; }
-
-h3 {
-  font-size: 2.8em;
-  font-weight: bold;
-  font-family: "Montserrat", sans-serif, sans-serif; }
-
-.concepto {
-  color: #777777;
-  font-style: italic;
-  font-family: "Droid Serif", sans-serif, serif;
-  margin-top: 2%; }
-
-.services, .about {
-  padding: 7% 0%; }
-
-.services .concepto, .about .concepto {
-  margin-bottom: 5%; }
-
-.services .box-service i, .about .box-service i {
-  background-color: #FED136;
-  border-radius: 50%;
-  font-size: 4.5em;
-  width: 100px;
-  height: 100px;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: auto; }
-
-.services .box-service h4, .about .box-service h4 {
-  font-weight: 600;
-  font-family: "Montserrat", sans-serif, sans-serif;
-  margin: 5% 0%; }
-
-.services .box-service p, .about .box-service p {
-  color: #777777;
-  font-family: "Roboto Slab", serif;
-  line-height: 24px; }
-
-.portfolio {
-  padding: 7% 0%; }
-  .portfolio .concepto {
+  .header-bg h2 {
+    font-family: "Droid Serif", sans-serif, serif;
+    font-style: italic;
+    font-size: 3em; }
+  .header-bg h3 {
+    font-family: "Montserrat", sans-serif, sans-serif;
+    font-size: 5.5em;
+    font-weight: bold;
     margin-bottom: 5%; }
-  .portfolio .portfolio-item {
+    @media (max-width: 400px) {
+      .header-bg h3 {
+        font-size: 3em; } }
+  .header-bg .btn-yellow {
+    color: white;
+    font-family: "Montserrat", sans-serif, sans-serif;
+    background-color: #FED136;
+    padding: 1.8% 3%;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: none; }
+  .header-bg .btn-yellow:hover {
+    background-color: #fec503; }
+
+/*©Milu Robles*/
+#services {
+  padding: 7% 0%; }
+  #services .concepto {
+    margin-bottom: 5%; }
+  #services .box-service i {
+    background-color: #FED136;
+    border-radius: 50%;
+    font-size: 4.5em;
+    width: 100px;
+    height: 100px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto; }
+  #services .box-service h4 {
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif, sans-serif;
+    margin: 5% 0%; }
+  #services .box-service p {
+    color: #777777;
+    font-family: "Roboto Slab", serif;
+    line-height: 24px; }
+
+/*©Milu Robles*/
+#portfolio {
+  background-color: #F7F7F7;
+  padding: 7% 0%; }
+  #portfolio .concepto {
+    margin-bottom: 5%; }
+  #portfolio .portfolio-item {
     background-color: white;
     margin: 4% 0%; }
-    .portfolio .portfolio-item h4 {
+    #portfolio .portfolio-item h4 {
       font-family: "Montserrat", sans-serif;
       margin: 6px 0 5px 0;
       font-weight: bold; }
-    .portfolio .portfolio-item img {
+    #portfolio .portfolio-item img {
       width: 100%; }
-    .portfolio .portfolio-item p {
+    #portfolio .portfolio-item p {
       font-family: "Droid Serif", sans-serif;
       font-style: italic;
       font-size: 1.2em;
       padding-bottom: 5%; }
 
 #team {
+  padding: 5% 0 2% 0;
   background-color: #F7F7F7; }
   #team .circle {
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
     border-radius: 100%;
     border: 6px solid white; }
-  #team p {
-    margin: 0 auto;
-    width: 40%; }
+  #team h4 {
+    margin: 2% 0 3% 0; }
+    #team h4 span {
+      color: #FED136; }
 
-.contact {
+/*©Milu Robles*/
+#contact {
   padding: 7% 0%;
   background-color: #222222;
   background-image: url("../../img/map-image.png");
   background-repeat: no-repeat;
   background-size: cover; }
+  #contact h3 {
+    color: white; }
+  #contact .formulario {
+    margin: 4% 0%; }
+    #contact .formulario form input {
+      padding: 5.2% 4%;
+      font-weight: bold;
+      font-family: "Montserrat", sans-serif; }
+    #contact .formulario textarea {
+      padding: 4%;
+      font-weight: bold;
+      font-family: "Montserrat", sans-serif; }
+  #contact .btn-yellow {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    background-color: #FED136;
+    padding: 1.8% 3%;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: none; }
+  #contact .btn-yellow:hover {
+    background-color: #fec503; }
 
-.contact h3 {
-  color: white; }
-
-.contact .formulario {
-  margin: 4% 0%; }
-
-.contact .formulario form input {
-  padding: 5.2% 4%;
-  font-weight: bold;
-  font-family: "Montserrat", sans-serif; }
-
-.contact .formulario textarea {
-  padding: 4%;
-  font-weight: bold;
-  font-family: "Montserrat", sans-serif; }
-
-.contact .btn-yellow {
-  color: white;
-  font-family: "Montserrat", sans-serif;
-  background-color: #FED136;
-  padding: 1.8% 3%;
-  font-size: 1.2em;
-  font-weight: bold;
-  border: none; }
-
-.contact .btn-yellow:hover {
-  background-color: #fec503; }
+#logos {
+  margin: 3% 0; }
 
 footer {
   font-size: 0.9em;
@@ -180,6 +177,7 @@ footer {
   footer p {
     margin-top: 3.5%; }
 
+/*©Karen Valdivia*/
 .social-media a.social-circle {
   border-radius: 100%;
   background-color: #303333;
@@ -191,5 +189,28 @@ footer {
   height: 1.7em;
   line-height: 1.7em;
   margin: 0 2%; }
+
+#about {
+  padding: 7% 0; }
+  #about p, #about img, #about h4 {
+    margin-top: 30px; }
+  #about p {
+    font-family: "Roboto Slab";
+    color: #777; }
+  #about img {
+    width: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    border: 6px solid #F7F7F7; }
+  #about .history {
+    background-color: #FED136;
+    padding-top: 40px;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    padding: auto;
+    margin: auto;
+    margin-top: 30px; }
 
 /*# sourceMappingURL=main.css.map */

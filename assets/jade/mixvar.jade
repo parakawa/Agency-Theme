@@ -1,6 +1,10 @@
 -var paginasweb="Desarrollamos páginas web estáticas y dinámicas para tu empresa o startup hechas a tu gusto y medida."
 -var responsive="El futuro es móvil, y conscientes de estos avances, diseñamos páginas adaptadas a todos los dispositivos móviles, sea celulares o tablets."
 -var moviles="Hey, también elaboramos apps móviles! Checa nuestro portafolio y entérate de las últimas aplicaciones que hemos desarrollado."
+-var history1="Karen y Paty se conocen en Cibertec, cuando Karen cursaba el segundo año de Diseño y Paty el primero de Computación e Informática. Ambas se caen mutuamente bien y se hacen amigas con facilidad."
+-var history2="En una tarde de enero, la chica de la Informática le comenta a Karen sobre la idea de hacer un emprendimiento orientado a hacer páginas web, a modo de probar hacer cosas por su propia cuenta. A ella le encanta la iniciativa y comienzan a trabajar sobre el logo y plan de trabajo. En marzo de ese año, Paty se retira de la institución, y ambas pierden contacto."
+-var history3="Navegando por internet, Karen se encuentra con una oportunidad. Postula a Laboratoria y logra ingresar. Fue cuando se reencuentra con Paty, quien también había postulado y logrado ingresar. Junto a ellas, se encontraba también una chica que venía de Trujillo, Sandra."
+-var history4="En marzo, entre la charlas del almuerzo, surge la idea de iniciar Altescii, aquel proyecto que, un año atrás, Karen y Paty habían dejado sin continuar. Esta vez, con más conocimientos, estudios y esperiencia, ellas al fin deciden comenzar el emprendimiento." 
 
 
 mixin teamimg(x)
@@ -13,9 +17,13 @@ mixin social(x,y,z)
 mixin team(teamimg, teamtittle, teamsubtit,x,y,z)
   .col-md-4
     +teamimg(teamimg)
-    h3= teamtittle
-    span.teamsubtit= " " + teamsubtit
+    h4= teamtittle
+    h5= " " + teamsubtit
     +social(x,y,z)
 
 mixin logos(logoname)
     img(src="img/logos/" + logoname)
+
+mixin imageabout(image)
+  img.text-center(src= image)
+

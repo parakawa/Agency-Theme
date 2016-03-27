@@ -4,28 +4,49 @@ body{
   font-family: $titles;
 }
 
-#menu.active {
-  background-color: #222222; }
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+  color: #555;
+  background-color: $theme;
+}
 
-header .navbar-default {
+
+
+/*©Milu Robles*/
+header {
+  .navbar-default {
   border: none;
   background-color: transparent;
-  padding: 2% 4%; }
-  header .navbar-default .navbar-brand {
+  padding: 2% 4%; 
+    .navbar-nav > li > a {
+    font-family: $titles, sans-serif;
+    color: white;
+    @media(max-width: 768px){
+        background-color: $oscuro;
+        &:hover{
+          background-color: $oscuro;
+            }
+          }
+       }
+    .navbar-brand {
     font-family: 'Kaushan Script', cursive;
     color: #FED136;
     font-size: 1.8em; }
-  header .navbar-default .navbar-nav > li > a {
-    font-family: $titles, sans-serif;
-    color: white; }
-    header .navbar-default .navbar-nav > li > a:hover {
-      color: #fec503; }
-    @media (max-width: 768px) {
-      header .navbar-default .navbar-nav > li > a {
-        background-color: #222222; }
-        header .navbar-default .navbar-nav > li > a:hover {
-          background-color: black; } }
+       }
+    }
 
+/*Cambio de bg-menu*/
+ .nav-black {
+  background-color: black; }
+
+h3 {
+  font-size: 2.8em;
+  font-weight: bold;
+  font-family: $titles, sans-serif;
+  @media(max-width: 400px){
+        font-size: 2em;} 
+    }
+
+/*©Milu Robles*/
 .header-bg {
   background-image: url("../../img/header-bg.jpg");
   background-repeat: no-repeat;
@@ -33,17 +54,20 @@ header .navbar-default {
   height: 114vh;
   display: flex;
   align-items: center;
-  color: white; }
-  .header-bg h2 {
+  color: white; 
+    h2 {
     font-family: $italica, serif;
     font-style: italic;
     font-size: 3em; }
-  .header-bg h1 {
+    h3 {
     font-family: $titles, sans-serif;
     font-size: 5.5em;
     font-weight: bold;
-    margin-bottom: 5%; }
-  .header-bg .btn-yellow {
+    margin-bottom: 5%; 
+    @media(max-width: 400px){
+        font-size: 3em;}
+      }
+    .btn-yellow {
     color: white;
     font-family: $titles, sans-serif;
     background-color: #FED136;
@@ -51,45 +75,41 @@ header .navbar-default {
     font-size: 1.2em;
     font-weight: bold;
     border: none; }
-    .header-bg .btn-yellow:hover {
+    .btn-yellow:hover {
       background-color: #fec503; }
+    }
 
-h3 {
-  font-size: 2.8em;
-  font-weight: bold;
-  font-family: $titles, sans-serif; }
-
-.concepto {
-  color: #777777;
-  font-style: italic;
-  font-family: $italica, serif;
-  margin-top: 2%; }
-
-.services, .about {
-  padding: 7% 0%; }
-  .services .concepto, .about .concepto {
+/*©Milu Robles*/
+#services{
+  padding: 7% 0%; 
+   .concepto{
     margin-bottom: 5%; }
-  .services .box-service i, .about .box-service i {
-    background-color: #FED136;
-    border-radius: 50%;
-    font-size: 4.5em;
-    width: 100px;
-    height: 100px;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto; }
-  .services .box-service h4, .about .box-service h4 {
-    font-weight: 600;
-    font-family: $titles, sans-serif;
-    margin: 5% 0%; }
-  .services .box-service p, .about .box-service p {
-    color: #777777;
-    font-family: "Roboto Slab", serif;
-    line-height: 24px; }
+  .box-service  {
+      i{
+      background-color: #FED136;
+      border-radius: 50%;
+      font-size: 4.5em;
+      width: 100px;
+      height: 100px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: auto; }
+       h4{
+      font-weight: 600;
+      font-family: $titles, sans-serif;
+      margin: 5% 0%; }         
+       p {
+      color: #777777;
+      font-family: "Roboto Slab", serif;
+      line-height: 24px; }
+        }
+    }  
 
-.portfolio{
+/*©Milu Robles*/
+#portfolio{
+  background-color: $bg-dark-light;
   padding: 7% 0%;
   .concepto{
     margin-bottom: 5%;
@@ -115,35 +135,41 @@ h3 {
 }
 
 #team {
+    padding: 5% 0 2% 0;
     background-color: $bg-dark-light;
     .circle {
       @include imgcircle(white);
     }
-  p {
-    margin: 0 auto;
-    width: 40%;
-  }
+    h4{
+      margin: 2% 0 3% 0;
+      span {
+     color: $theme;
+      } 
+    }
+    
 }
 
-.contact {
+/*©Milu Robles*/
+#contact {
   padding: 7% 0%;
   background-color: #222222;
   background-image: url("../../img/map-image.png");
   background-repeat: no-repeat;
-  background-size: cover; }
-  .contact h3 {
+  background-size: cover; 
+    h3 {
     color: white; }
-  .contact .formulario {
-    margin: 4% 0%; }
-    .contact .formulario form input {
+    .formulario {
+    margin: 4% 0%; 
+      form input {
       padding: 5.2% 4%;
       font-weight: bold;
       font-family: "Montserrat", sans-serif; }
-    .contact .formulario textarea {
+      textarea {
       padding: 4%;
       font-weight: bold;
       font-family: "Montserrat", sans-serif; }
-  .contact .btn-yellow {
+      }
+    .btn-yellow {
     color: white;
     font-family: "Montserrat", sans-serif;
     background-color: #FED136;
@@ -151,8 +177,13 @@ h3 {
     font-size: 1.2em;
     font-weight: bold;
     border: none; }
-    .contact .btn-yellow:hover {
+    .btn-yellow:hover {
       background-color: #fec503; }
+    }
+
+#logos{
+    margin: 3% 0;
+}
 
 footer{
   font-size: 0.9em;
@@ -176,6 +207,7 @@ footer{
   }
 }
 
+/*©Karen Valdivia*/
 .social-media a.social-circle {
   border-radius: 100%;
   background-color: #303333;
@@ -187,3 +219,30 @@ footer{
   height: 1.7em;
   line-height: 1.7em;
   margin: 0 2%; }
+
+#about {
+  padding: 7% 0;
+  p,img,h4{
+    margin-top: 30px;
+  }
+  p{
+    font-family: "Roboto Slab";
+    color: #777;
+  }
+  img {
+  width: 100%;
+  @include radius(100%);
+  border: 6px solid #F7F7F7; }
+  .history{
+  background-color: $theme;
+  padding-top: 40px;
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  padding: auto;
+  margin: auto;
+  margin-top: 30px;
+  }
+ }
+
+
